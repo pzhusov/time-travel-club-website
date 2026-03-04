@@ -226,3 +226,22 @@ body {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+/* Marquee animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+/* Cursor */
+.cursor-none {
+  cursor: none;
+}
