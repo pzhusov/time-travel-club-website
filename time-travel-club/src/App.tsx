@@ -413,7 +413,7 @@ function App() {
               <TextReveal delay={400}>
                 <div className="grid grid-cols-3 gap-8 mt-12 pt-8 border-t border-[#333333]">
                   <div className="group">
-                    <AnimatedCounter end={10} suffix="+" />
+                    <AnimatedCounter end={20} suffix="+" />
                     <div className="text-sm text-[#888888] mt-2 group-hover:text-[#D4AF37] transition-colors">Years Experience</div>
                   </div>
                   <div className="group">
