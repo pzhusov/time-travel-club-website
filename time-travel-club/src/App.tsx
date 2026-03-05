@@ -488,27 +488,51 @@ function App() {
             {[
               {
                 icon: TrendingUp,
-                title: 'Deep Marketing Research',
-                description: 'We uncover the invisible currents shaping consumer behavior through advanced quantitative and qualitative methodologies. Our research goes beyond surface-level data to reveal the psychological drivers behind purchasing decisions, enabling you to anticipate market shifts before they occur.',
-                features: ['Consumer Psychology', 'Behavioral Economics', 'Demand Forecasting', 'Brand Positioning', 'Competitive Intelligence']
+                title: 'Market Entry Analysis',
+                description: 'Comprehensive market assessment for entering new territories. We analyze tender volumes, identify key customers, evaluate seasonality patterns, and determine funding stability to ensure informed market entry decisions.',
+                features: ['Tender Volume Analysis', 'Customer Profiling', 'Seasonality Assessment', 'Funding Stability Evaluation', 'Market Sizing']
               },
               {
                 icon: Globe,
-                title: 'Industry Research',
-                description: 'Our sector-specific intelligence provides granular visibility into market mechanics, from macro-economic trends to micro-level competitive dynamics. We deliver actionable insights that empower strategic decision-making across the entire value chain.',
-                features: ['Market Sizing', 'Trend Analysis', 'Supply Chain Intelligence', 'Regulatory Assessment', 'Opportunity Mapping']
+                title: 'Geographic Intelligence',
+                description: 'Strategic regional analysis to identify optimal market positioning. We evaluate regional activity levels, competition density, and growth potential to maximize your market presence.',
+                features: ['Regional Activity Mapping', 'Competition Density Analysis', 'Market Potential Assessment', 'Entry Strategy by Region', 'Cross-Regional Planning']
               },
               {
                 icon: Users,
-                title: 'Management Consulting',
-                description: 'We partner with leadership to optimize organizational performance through data-driven transformation. Our approach combines proven frameworks with innovative solutions to enhance efficiency, build capabilities, and create sustainable competitive advantage.',
-                features: ['Operational Excellence', 'Digital Transformation', 'Organizational Design', 'Change Management', 'Performance Optimization']
+                title: 'Competitive Intelligence',
+                description: 'In-depth analysis of competitive landscape to identify strategic positioning. We segment competitors by size, assess market share, and evaluate partnership opportunities.',
+                features: ['Competitor Mapping', 'Market Share Analysis', 'Subcontractor Assessment', 'Strategic Positioning', 'Competitive Benchmarking']
               },
               {
                 icon: Lock,
-                title: 'Strategic Consulting',
-                description: 'We navigate uncertainty with mathematical precision, developing comprehensive strategies for long-term growth and market leadership. From market entry to M&A advisory, our strategic insights transform challenges into opportunities.',
-                features: ['Market Entry Strategy', 'M&A Advisory', 'Corporate Restructuring', 'Growth Strategy', 'Risk Mitigation']
+                title: 'Regulatory Compliance',
+                description: 'Complete barrier analysis and compliance roadmap. We identify legal requirements, necessary certifications, insurance needs, and financial guarantees for market entry.',
+                features: ['Legal Form Requirements', 'Certification Roadmap', 'Insurance Analysis', 'Financial Guarantees', 'Compliance Timeline']
+              },
+              {
+                icon: Shield,
+                title: 'Financial Modeling',
+                description: 'Detailed financial analysis for market entry. We provide pricing benchmarks, cost structure analysis, payment terms optimization, and risk assessment.',
+                features: ['Pricing Benchmarks', 'Cost Structure Analysis', 'Payment Terms Optimization', 'Risk Assessment', 'Investment Planning']
+              },
+              {
+                icon: MapPin,
+                title: 'Tender Documentation',
+                description: 'Expert analysis of tender documents to maximize success rate. We identify key requirements, common pitfalls, and disqualification risks to ensure competitive submissions.',
+                features: ['Document Analysis', 'Trap Identification', 'Disqualification Risk Assessment', 'Success Strategy', 'Real Case Studies']
+              },
+              {
+                icon: Sparkles,
+                title: 'Expansion Strategy',
+                description: 'Pan-European market expansion planning. We identify optimal markets, assess entry complexity, and develop partnership models for sustainable growth.',
+                features: ['Market Selection', 'Entry Complexity Analysis', 'Partnership Models', 'Branch vs. Partner Assessment', 'Growth Roadmap']
+              },
+              {
+                icon: Star,
+                title: 'Strategic Advisory',
+                description: 'End-to-end strategic consulting from market entry to expansion. We provide actionable recommendations, step-by-step implementation plans, and ongoing support.',
+                features: ['Market Entry Recommendation', 'Implementation Roadmap', 'Timeline & Budget Planning', 'Risk Mitigation', 'Ongoing Strategic Support']
               }
             ].map((service, index) => (
               <TextReveal key={index} delay={index * 100}>
