@@ -518,9 +518,27 @@ function App() {
               },
               {
                 icon: MapPin,
-                title: 'Global Consulting',
-                description: 'Expert marketing research and consultancy services for businesses expanding globally.',
-                features: ['Market Research', 'Strategy', 'Growth Plans']
+                title: 'Deep Marketing Research',
+                description: 'Comprehensive market analysis and consumer behavior studies to uncover actionable insights for business growth.',
+                features: ['Market Analysis', 'Consumer Insights', 'Competitive Research']
+              },
+              {
+                icon: TrendingUp,
+                title: 'Industry Research',
+                description: 'In-depth sector-specific analysis providing deep understanding of market trends and opportunities.',
+                features: ['Sector Analysis', 'Trend Forecasting', 'Opportunity Assessment']
+              },
+              {
+                icon: Users,
+                title: 'Management Consulting',
+                description: 'Expert advisory services to optimize organizational structure, operations, and strategic decision-making.',
+                features: ['Process Optimization', 'Organizational Design', 'Change Management']
+              },
+              {
+                icon: Lock,
+                title: 'Strategic Consulting',
+                description: 'Long-term strategic planning and implementation support for sustainable business transformation.',
+                features: ['Strategy Development', 'Growth Planning', 'Implementation Support']
               }
             ].map((service, index) => (
               <TextReveal key={index} delay={index * 100}>
