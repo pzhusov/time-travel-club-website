@@ -479,7 +479,7 @@ function App() {
                 Our <span className="gradient-text">Services</span>
               </h2>
               <p className="text-[#888888] text-lg max-w-2xl mx-auto">
-                Comprehensive luxury travel solutions tailored to the discerning traveler
+                Premium consulting and luxury travel solutions for discerning clients seeking excellence
               </p>
             </div>
           </TextReveal>
@@ -517,28 +517,28 @@ function App() {
                 features: ['Full Planning', 'Vendor Network', 'On-Site Support']
               },
               {
-                icon: MapPin,
+                icon: TrendingUp,
                 title: 'Deep Marketing Research',
-                description: 'Comprehensive market analysis and consumer behavior studies to uncover actionable insights for business growth.',
-                features: ['Market Analysis', 'Consumer Insights', 'Competitive Research']
+                description: 'We uncover the invisible currents shaping consumer behavior through advanced quantitative and qualitative methodologies. Our research goes beyond surface-level data to reveal the psychological drivers behind purchasing decisions, enabling you to anticipate market shifts before they occur.',
+                features: ['Consumer Psychology', 'Behavioral Economics', 'Demand Forecasting', 'Brand Positioning', 'Competitive Intelligence']
               },
               {
-                icon: TrendingUp,
+                icon: Globe,
                 title: 'Industry Research',
-                description: 'In-depth sector-specific analysis providing deep understanding of market trends and opportunities.',
-                features: ['Sector Analysis', 'Trend Forecasting', 'Opportunity Assessment']
+                description: 'Our sector-specific intelligence provides granular visibility into market mechanics, from macro-economic trends to micro-level competitive dynamics. We deliver actionable insights that empower strategic decision-making across the entire value chain.',
+                features: ['Market Sizing', 'Trend Analysis', 'Supply Chain Intelligence', 'Regulatory Assessment', ' Opportunity Mapping']
               },
               {
                 icon: Users,
                 title: 'Management Consulting',
-                description: 'Expert advisory services to optimize organizational structure, operations, and strategic decision-making.',
-                features: ['Process Optimization', 'Organizational Design', 'Change Management']
+                description: 'We partner with leadership to optimize organizational performance through data-driven transformation. Our approach combines proven frameworks with innovative solutions to enhance efficiency, build capabilities, and create sustainable competitive advantage.',
+                features: ['Operational Excellence', 'Digital Transformation', 'Organizational Design', 'Change Management', 'Performance Optimization']
               },
               {
                 icon: Lock,
                 title: 'Strategic Consulting',
-                description: 'Long-term strategic planning and implementation support for sustainable business transformation.',
-                features: ['Strategy Development', 'Growth Planning', 'Implementation Support']
+                description: 'We navigate uncertainty with mathematical precision, developing comprehensive strategies for long-term growth and market leadership. From market entry to M&A advisory, our strategic insights transform challenges into opportunities.',
+                features: ['Market Entry Strategy', 'M&A Advisory', 'Corporate Restructuring', 'Growth Strategy', 'Risk Mitigation']
               }
             ].map((service, index) => (
               <TextReveal key={index} delay={index * 100}>
