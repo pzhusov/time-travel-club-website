@@ -504,56 +504,6 @@ function App() {
         </div>
       </section>
 
-      {/* Testimonial Section */}
-      <section className="section-padding relative">
-        <div className="container-custom">
-          <TextReveal>
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 px-4 py-2 glass rounded-full mb-6">
-                <Quote className="w-4 h-4 text-[#D4AF37]" />
-                <span className="text-xs text-[#888888] uppercase tracking-wider">Testimonials</span>
-              </div>
-              <h2 className="text-4xl md:text-5xl font-bold">
-                What Our <span className="gradient-text">Clients Say</span>
-              </h2>
-            </div>
-          </TextReveal>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {[
-              {
-                quote: "Time Travel Club's strategic insights transformed our market approach. Their research uncovered opportunities we never knew existed, leading to a 200% revenue growth in just 18 months.",
-                author: "Alexandra R.",
-                role: "CEO, Technology Sector"
-              },
-              {
-                quote: "The depth of analysis and strategic precision is unmatched. They don't just provide data—they deliver a roadmap for transformation that yields measurable results.",
-                author: "Michael Chen",
-                role: "Managing Director, Finance"
-              }
-            ].map((testimonial, index) => (
-              <TextReveal key={index} delay={index * 200}>
-                <div className="glassStrong p-8 rounded-2xl relative">
-                  <Quote className="absolute top-6 right-6 w-8 h-8 text-[#D4AF37]/20" />
-                  <p className="text-lg text-[#ededed] mb-6 leading-relaxed italic">
-                    "{testimonial.quote}"
-                  </p>
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#D4AF37] to-[#F4E4BC] flex items-center justify-center text-[#050505] font-bold">
-                      {testimonial.author.charAt(0)}
-                    </div>
-                    <div>
-                      <div className="font-semibold">{testimonial.author}</div>
-                      <div className="text-sm text-[#888888]">{testimonial.role}</div>
-                    </div>
-                  </div>
-                </div>
-              </TextReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Contact Section */}
       <section id="contact" className="section-padding relative bg-[#0a0a0a]">
         <div className="container-custom">
