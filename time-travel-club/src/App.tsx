@@ -386,86 +386,26 @@ function App() {
       {/* About Section */}
       <section id="about" className="section-padding relative">
         <div className="container-custom">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
-            {/* Content */}
-            <div>
-              <TextReveal>
-                <h2 className="text-4xl md:text-6xl font-bold mb-8 leading-tight">
-                  Visionary <span className="gradient-text">Intelligence</span>
-                </h2>
-              </TextReveal>
+          <div className="max-w-3xl mx-auto text-center">
+            <TextReveal>
+              <h2 className="text-4xl md:text-6xl font-bold mb-8 leading-tight">
+                Visionary <span className="gradient-text">Intelligence</span>
+              </h2>
+            </TextReveal>
 
-              <TextReveal delay={200}>
-                <div className="space-y-6 text-[#888888] leading-relaxed">
-                  <p className="text-lg">
-                    Time Travel Club is a premier strategic consulting firm, licensed by the Dubai Integrated Economic Zones Authority and headquartered in the heart of Dubai Silicon Oasis.
-                  </p>
-                  <p>
-                    We specialize in transforming complex market dynamics into clear, actionable strategies. Our team of industry veterans combines decades of experience with cutting-edge research methodologies to deliver insights that shape the future of business.
-                  </p>
-                  <p>
-                    As a licensed FZCO, we uphold the highest standards of analytical rigor and strategic integrity, ensuring every client receives transformative insights that drive measurable business outcomes.
-                  </p>
-                </div>
-              </TextReveal>
-
-              {/* Stats */}
-              <TextReveal delay={400}>
-                <div className="grid grid-cols-3 gap-8 mt-12 pt-8 border-t border-[#333333]">
-                  <div className="group">
-                    <AnimatedCounter end={20} suffix="+" />
-                    <div className="text-sm text-[#888888] mt-2 group-hover:text-[#D4AF37] transition-colors">Years Experience</div>
-                  </div>
-                  <div className="group">
-                    <AnimatedCounter end={500} suffix="+" />
-                    <div className="text-sm text-[#888888] mt-2 group-hover:text-[#D4AF37] transition-colors">Projects Delivered</div>
-                  </div>
-                  <div className="group">
-                    <AnimatedCounter end={50} suffix="+" />
-                    <div className="text-sm text-[#888888] mt-2 group-hover:text-[#D4AF37] transition-colors">Industries Served</div>
-                  </div>
-                </div>
-              </TextReveal>
-            </div>
-
-            {/* Visual */}
-            <div className="relative">
-              <TextReveal delay={300}>
-                <div className="relative">
-                  {/* Main card */}
-                  <div className="aspect-[4/5] rounded-3xl glassStrong overflow-hidden glow-gold group">
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#D4AF37]/10 via-transparent to-transparent" />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="text-center">
-                        <TrendingUp className="w-32 h-32 mx-auto text-[#D4AF37] mb-6 group-hover:scale-110 transition-transform duration-500" />
-                        <div className="text-3xl font-bold mb-2">Dubai Silicon Oasis</div>
-                        <div className="text-[#888888]">IFZA Properties</div>
-                      </div>
-                    </div>
-                    {/* Corner accents */}
-                    <div className="absolute top-4 left-4 w-8 h-8 border-l-2 border-t-2 border-[#D4AF37]/30" />
-                    <div className="absolute bottom-4 right-4 w-8 h-8 border-r-2 border-b-2 border-[#D4AF37]/30" />
-                  </div>
-
-                  {/* Floating badge */}
-                  <div className="absolute -bottom-6 -left-6 glassStrong px-8 py-5 rounded-2xl glow-gold animate-float">
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-[#D4AF37]/20 flex items-center justify-center">
-                        <MapPin className="w-6 h-6 text-[#D4AF37]" />
-                      </div>
-                      <div>
-                        <div className="text-xs text-[#888888] uppercase tracking-wider">Based in</div>
-                        <div className="text-xl font-bold">Dubai, UAE</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Decorative elements */}
-                  <div className="absolute -top-4 -right-4 w-24 h-24 border border-[#D4AF37]/20 rounded-full" />
-                  <div className="absolute -bottom-8 -right-8 w-16 h-16 border border-[#D4AF37]/10 rounded-full" />
-                </div>
-              </TextReveal>
-            </div>
+            <TextReveal delay={200}>
+              <div className="space-y-6 text-[#888888] leading-relaxed">
+                <p className="text-lg">
+                  Time Travel Club is a premier strategic consulting firm, licensed by the Dubai Integrated Economic Zones Authority and headquartered in the heart of Dubai Silicon Oasis.
+                </p>
+                <p>
+                  We specialize in transforming complex market dynamics into clear, actionable strategies. Our team of industry veterans combines decades of experience with cutting-edge research methodologies to deliver insights that shape the future of business.
+                </p>
+                <p>
+                  As a licensed FZCO, we uphold the highest standards of analytical rigor and strategic integrity, ensuring every client receives transformative insights that drive measurable business outcomes.
+                </p>
+              </div>
+            </TextReveal>
           </div>
         </div>
       </section>
