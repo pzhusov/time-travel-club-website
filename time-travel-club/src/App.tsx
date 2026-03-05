@@ -318,15 +318,15 @@ function App() {
           {/* Main heading */}
           <TextReveal delay={400}>
             <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter mb-6">
-              <span className="block">EXPERIENCE</span>
-              <span className="gradient-text">TIME TRAVEL</span>
+              <span className="block">STRATEGIC</span>
+              <span className="gradient-text">INSIGHTS</span>
             </h1>
           </TextReveal>
 
           {/* Subheading */}
           <TextReveal delay={600}>
             <p className="text-lg md:text-xl text-[#888888] max-w-2xl mx-auto mb-12 leading-relaxed">
-              Unlock extraordinary journeys through time. Join an exclusive club of discerning travelers seeking unparalleled adventures across eras.
+              We don't just analyze the present—we illuminate the future. Join industry leaders who trust our research and strategic expertise to navigate uncertainty and drive sustainable growth.
             </p>
           </TextReveal>
 
@@ -338,7 +338,7 @@ function App() {
                 className="group relative px-10 py-4 bg-[#ededed] text-[#050505] font-medium rounded-lg overflow-hidden"
               >
                 <span className="relative z-10 flex items-center gap-2">
-                  Become a Member
+                  Partner With Us
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </span>
                 <div className="absolute inset-0 bg-[#D4AF37] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300" />
@@ -371,11 +371,11 @@ function App() {
           <div className="animate-marquee whitespace-nowrap flex items-center gap-16">
             {[...Array(4)].map((_, i) => (
               <div key={i} className="flex items-center gap-16">
-                <span className="text-2xl md:text-3xl font-bold text-[#333] uppercase tracking-widest">Premium Concierge</span>
+                <span className="text-2xl md:text-3xl font-bold text-[#333] uppercase tracking-widest">Strategic Research</span>
                 <span className="text-2xl md:text-3xl font-bold gradient-text">✦</span>
-                <span className="text-2xl md:text-3xl font-bold text-[#333] uppercase tracking-widest">Luxury Travel</span>
+                <span className="text-2xl md:text-3xl font-bold text-[#333] uppercase tracking-widest">Market Intelligence</span>
                 <span className="text-2xl md:text-3xl font-bold gradient-text">✦</span>
-                <span className="text-2xl md:text-3xl font-bold text-[#333] uppercase tracking-widest">Exclusive Access</span>
+                <span className="text-2xl md:text-3xl font-bold text-[#333] uppercase tracking-widest">Data-Driven Strategy</span>
                 <span className="text-2xl md:text-3xl font-bold gradient-text">✦</span>
               </div>
             ))}
@@ -391,20 +391,20 @@ function App() {
             <div>
               <TextReveal>
                 <h2 className="text-4xl md:text-6xl font-bold mb-8 leading-tight">
-                  A Legacy of <span className="gradient-text">Excellence</span>
+                  Visionary <span className="gradient-text">Intelligence</span>
                 </h2>
               </TextReveal>
 
               <TextReveal delay={200}>
                 <div className="space-y-6 text-[#888888] leading-relaxed">
                   <p className="text-lg">
-                    Time Travel Club is a premier luxury travel organization, licensed by the Dubai Integrated Economic Zones Authority and headquartered in the heart of Dubai Silicon Oasis.
+                    Time Travel Club is a premier strategic consulting firm, licensed by the Dubai Integrated Economic Zones Authority and headquartered in the heart of Dubai Silicon Oasis.
                   </p>
                   <p>
-                    Founded with a vision to redefine luxury travel, we specialize in curating extraordinary experiences that transcend the ordinary. Our expert team combines decades of industry knowledge with innovative approaches to deliver unforgettable journeys.
+                    We specialize in transforming complex market dynamics into clear, actionable strategies. Our team of industry veterans combines decades of experience with cutting-edge research methodologies to deliver insights that shape the future of business.
                   </p>
                   <p>
-                    As a licensed FZCO, we uphold the highest standards of professionalism and integrity, ensuring every member receives exceptional service and exclusive access to world-class travel experiences.
+                    As a licensed FZCO, we uphold the highest standards of analytical rigor and strategic integrity, ensuring every client receives transformative insights that drive measurable business outcomes.
                   </p>
                 </div>
               </TextReveal>
@@ -417,12 +417,12 @@ function App() {
                     <div className="text-sm text-[#888888] mt-2 group-hover:text-[#D4AF37] transition-colors">Years Experience</div>
                   </div>
                   <div className="group">
-                    <AnimatedCounter end={50} suffix="K+" />
-                    <div className="text-sm text-[#888888] mt-2 group-hover:text-[#D4AF37] transition-colors">Happy Members</div>
+                    <AnimatedCounter end={500} suffix="+" />
+                    <div className="text-sm text-[#888888] mt-2 group-hover:text-[#D4AF37] transition-colors">Projects Delivered</div>
                   </div>
                   <div className="group">
-                    <AnimatedCounter end={100} suffix="+" />
-                    <div className="text-sm text-[#888888] mt-2 group-hover:text-[#D4AF37] transition-colors">Destinations</div>
+                    <AnimatedCounter end={50} suffix="+" />
+                    <div className="text-sm text-[#888888] mt-2 group-hover:text-[#D4AF37] transition-colors">Industries Served</div>
                   </div>
                 </div>
               </TextReveal>
@@ -437,7 +437,7 @@ function App() {
                     <div className="absolute inset-0 bg-gradient-to-br from-[#D4AF37]/10 via-transparent to-transparent" />
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="text-center">
-                        <Globe className="w-32 h-32 mx-auto text-[#D4AF37] mb-6 group-hover:scale-110 transition-transform duration-500" />
+                        <TrendingUp className="w-32 h-32 mx-auto text-[#D4AF37] mb-6 group-hover:scale-110 transition-transform duration-500" />
                         <div className="text-3xl font-bold mb-2">Dubai Silicon Oasis</div>
                         <div className="text-[#888888]">IFZA Properties</div>
                       </div>
@@ -479,43 +479,13 @@ function App() {
                 Our <span className="gradient-text">Services</span>
               </h2>
               <p className="text-[#888888] text-lg max-w-2xl mx-auto">
-                Premium consulting and luxury travel solutions for discerning clients seeking excellence
+                Comprehensive strategic consulting services for forward-thinking organizations
               </p>
             </div>
           </TextReveal>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-6">
             {[
-              {
-                icon: Star,
-                title: 'Premium Concierge',
-                description: 'Personalized 24/7 concierge service handling every detail of your journey, from reservations to exclusive access.',
-                features: ['24/7 Support', 'Priority Booking', 'Personal Manager']
-              },
-              {
-                icon: Globe,
-                title: 'Luxury Travel Planning',
-                description: 'Bespoke itineraries crafted by industry experts, ensuring unique experiences beyond conventional tourism.',
-                features: ['Custom Itineraries', 'Expert Guides', 'VIP Access']
-              },
-              {
-                icon: Clock,
-                title: 'Time-Critical Services',
-                description: 'Priority booking and coordination for time-sensitive experiences, ensuring you never miss a moment.',
-                features: ['Express Booking', 'Flexible Changes', 'Guaranteed Entry']
-              },
-              {
-                icon: Shield,
-                title: 'Corporate Training',
-                description: 'Professional and management development training programs conducted in prestigious international locations.',
-                features: ['Global Venues', 'Expert Trainers', 'Certification']
-              },
-              {
-                icon: Sparkles,
-                title: 'Event Management',
-                description: 'Exclusive event organization and management, from corporate gatherings to private celebrations.',
-                features: ['Full Planning', 'Vendor Network', 'On-Site Support']
-              },
               {
                 icon: TrendingUp,
                 title: 'Deep Marketing Research',
@@ -526,7 +496,7 @@ function App() {
                 icon: Globe,
                 title: 'Industry Research',
                 description: 'Our sector-specific intelligence provides granular visibility into market mechanics, from macro-economic trends to micro-level competitive dynamics. We deliver actionable insights that empower strategic decision-making across the entire value chain.',
-                features: ['Market Sizing', 'Trend Analysis', 'Supply Chain Intelligence', 'Regulatory Assessment', ' Opportunity Mapping']
+                features: ['Market Sizing', 'Trend Analysis', 'Supply Chain Intelligence', 'Regulatory Assessment', 'Opportunity Mapping']
               },
               {
                 icon: Users,
@@ -688,7 +658,7 @@ function App() {
                 <span className="text-xs text-[#888888] uppercase tracking-wider">Testimonials</span>
               </div>
               <h2 className="text-4xl md:text-5xl font-bold">
-                What Our <span className="gradient-text">Members Say</span>
+                What Our <span className="gradient-text">Clients Say</span>
               </h2>
             </div>
           </TextReveal>
@@ -696,14 +666,14 @@ function App() {
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {[
               {
-                quote: "Time Travel Club transformed my understanding of luxury travel. Every journey has been extraordinary, from the moment I book until I return home.",
+                quote: "Time Travel Club's strategic insights transformed our market approach. Their research uncovered opportunities we never knew existed, leading to a 200% revenue growth in just 18 months.",
                 author: "Alexandra R.",
-                role: "Member since 2022"
+                role: "CEO, Technology Sector"
               },
               {
-                quote: "The level of detail and personalization is unmatched. They don't just plan trips; they craft experiences that create lasting memories.",
+                quote: "The depth of analysis and strategic precision is unmatched. They don't just provide data—they deliver a roadmap for transformation that yields measurable results.",
                 author: "Michael Chen",
-                role: "Member since 2021"
+                role: "Managing Director, Finance"
               }
             ].map((testimonial, index) => (
               <TextReveal key={index} delay={index * 200}>
@@ -735,10 +705,10 @@ function App() {
             <TextReveal>
               <div className="text-center mb-12">
                 <h2 className="text-4xl md:text-6xl font-bold mb-6">
-                  Begin Your <span className="gradient-text">Journey</span>
+                  Begin Your <span className="gradient-text">Transformation</span>
                 </h2>
                 <p className="text-[#888888] text-lg">
-                  Join Time Travel Club and unlock a world of extraordinary experiences
+                  Partner with Time Travel Club and unlock strategic insights that drive growth
                 </p>
               </div>
             </TextReveal>
@@ -777,7 +747,7 @@ function App() {
                     <textarea
                       rows={5}
                       className="w-full bg-[#111111] border border-[#333333] rounded-lg px-4 py-4 text-[#ededed] focus:border-[#D4AF37] focus:outline-none transition-colors group-hover:border-[#D4AF37]/50 resize-none"
-                      placeholder="Tell us about your travel aspirations..."
+                      placeholder="Tell us about your strategic challenges..."
                     />
                   </div>
                   <button
