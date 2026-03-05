@@ -504,6 +504,159 @@ function App() {
         </div>
       </section>
 
+      {/* Methodology Section */}
+      <section className="section-padding relative">
+        <div className="container-custom">
+          <TextReveal>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-6xl font-bold mb-6">
+                Our <span className="gradient-text">Approach</span>
+              </h2>
+              <p className="text-[#888888] text-lg max-w-2xl mx-auto">
+                A systematic methodology built on data-driven insights and proven frameworks
+              </p>
+            </div>
+          </TextReveal>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                step: '01',
+                title: 'Analysis',
+                description: 'We conduct comprehensive market research, analyze competitive landscapes, and gather actionable data to establish a solid foundation for strategic decision-making.'
+              },
+              {
+                step: '02',
+                title: 'Strategy',
+                description: 'Based on our analysis, we develop tailored strategies that align with your business objectives, market position, and growth opportunities.'
+              },
+              {
+                step: '03',
+                title: 'Implementation',
+                description: 'We support the execution of strategic initiatives, providing ongoing guidance and adjustments to ensure measurable results.'
+              }
+            ].map((item, index) => (
+              <TextReveal key={index} delay={index * 150}>
+                <div className="glassStrong p-8 rounded-2xl relative">
+                  <div className="text-6xl font-bold gradient-text mb-4 opacity-30">{item.step}</div>
+                  <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
+                  <p className="text-[#888888] leading-relaxed">{item.description}</p>
+                </div>
+              </TextReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section className="section-padding relative bg-[#0a0a0a]">
+        <div className="container-custom">
+          <TextReveal>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-6xl font-bold mb-6">
+                Why Choose <span className="gradient-text">Us</span>
+              </h2>
+              <p className="text-[#888888] text-lg max-w-2xl mx-auto">
+                We deliver results that matter to your business
+              </p>
+            </div>
+          </TextReveal>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                icon: TrendingUp,
+                title: 'Data-Driven',
+                description: 'Every recommendation is backed by rigorous data analysis and market research'
+              },
+              {
+                icon: Globe,
+                title: 'Global Expertise',
+                description: 'Deep knowledge of European markets and cross-border business dynamics'
+              },
+              {
+                icon: Shield,
+                title: 'Proven Framework',
+                description: 'Established methodologies refined through numerous successful projects'
+              },
+              {
+                icon: Users,
+                title: 'Client-Focused',
+                description: 'Tailored solutions designed to address your specific business challenges'
+              }
+            ].map((item, index) => (
+              <TextReveal key={index} delay={index * 100}>
+                <div className="glassStrong p-6 rounded-2xl text-center">
+                  <div className="w-14 h-14 mx-auto mb-4 rounded-xl bg-[#D4AF37]/10 flex items-center justify-center">
+                    <item.icon className="w-7 h-7 text-[#D4AF37]" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-3">{item.title}</h3>
+                  <p className="text-[#888888] text-sm">{item.description}</p>
+                </div>
+              </TextReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="section-padding relative">
+        <div className="container-custom">
+          <TextReveal>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-6xl font-bold mb-6">
+                How We <span className="gradient-text">Work</span>
+              </h2>
+              <p className="text-[#888888] text-lg max-w-2xl mx-auto">
+                A collaborative approach to solving your business challenges
+              </p>
+            </div>
+          </TextReveal>
+
+          <div className="max-w-4xl mx-auto">
+            {[
+              {
+                number: '01',
+                title: 'Discovery Call',
+                description: 'We start with a detailed discussion to understand your business, challenges, and objectives. This helps us align our expertise with your needs.'
+              },
+              {
+                number: '02',
+                title: 'Proposal & Planning',
+                description: 'Based on our discussion, we create a tailored proposal outlining our approach, timeline, deliverables, and investment required.'
+              },
+              {
+                number: '03',
+                title: 'Research & Analysis',
+                description: 'Our team conducts thorough market research, competitive analysis, and data gathering to build a comprehensive understanding of your market.'
+              },
+              {
+                number: '04',
+                title: 'Strategy Development',
+                description: 'We transform insights into actionable strategies, presenting clear recommendations with implementation roadmaps.'
+              },
+              {
+                number: '05',
+                title: 'Ongoing Partnership',
+                description: 'We remain available for ongoing strategic support, helping you navigate market changes and seize new opportunities.'
+              }
+            ].map((step, index) => (
+              <TextReveal key={index} delay={index * 100}>
+                <div className="flex gap-6 pb-8 border-l-2 border-[#333] ml-4 last:border-0">
+                  <div className="w-12 h-12 flex-shrink-0 -ml-[31px] rounded-full bg-[#D4AF37] text-[#050505] font-bold flex items-center justify-center">
+                    {step.number}
+                  </div>
+                  <div className="glassStrong p-6 rounded-2xl flex-1">
+                    <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
+                    <p className="text-[#888888]">{step.description}</p>
+                  </div>
+                </div>
+              </TextReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="section-padding relative bg-[#0a0a0a]">
         <div className="container-custom">
