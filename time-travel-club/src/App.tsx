@@ -399,7 +399,7 @@ function App() {
                   Time Travel Club is a premier strategic consulting firm, licensed by the Dubai Integrated Economic Zones Authority and headquartered in the heart of Dubai Silicon Oasis.
                 </p>
                 <p>
-                  We specialize in transforming complex market dynamics into clear, actionable strategies. Our team of industry veterans combines decades of experience with cutting-edge research methodologies to deliver insights that shape the future of business.
+                  We specialize in transforming complex market dynamics into clear, actionable strategies. Our team combines solid industry experience with modern research methodologies to deliver insights that shape the future of business.
                 </p>
                 <p>
                   As a licensed FZCO, we uphold the highest standards of analytical rigor and strategic integrity, ensuring every client receives transformative insights that drive measurable business outcomes.
