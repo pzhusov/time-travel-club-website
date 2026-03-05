@@ -761,7 +761,7 @@ function App() {
 
             {/* Links */}
             <div className="flex items-center gap-8 text-sm">
-              {['About', 'Services', 'Mentoring', 'Contact'].map((item) => (
+              {['About', 'Services', 'Contact'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
@@ -781,7 +781,7 @@ function App() {
           {/* License Info */}
           <div className="mt-12 pt-8 border-t border-[#222] text-center">
             <div className="text-sm text-[#666]">
-              License No: 39915 | Licensed by Dubai Integrated Economic Zones Authority | Manager: Sergiy Kravchenko
+              Licensed by Dubai Integrated Economic Zones Authority
             </div>
             <div className="text-sm text-[#666] mt-2">
               Dubai Silicon Oasis, IFZA Properties
