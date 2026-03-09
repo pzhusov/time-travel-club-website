@@ -228,7 +228,7 @@ function App() {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-10">
-              {['About', 'Services', 'Mentoring', 'Contact'].map((item) => (
+              {['About', 'Services', 'Contact'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
@@ -264,7 +264,7 @@ function App() {
         {/* Mobile Menu */}
         <div className={`md:hidden glass-strong absolute top-full left-0 right-0 overflow-hidden transition-all duration-300 ${mobileMenuOpen ? 'max-h-96' : 'max-h-0'}`}>
           <div className="p-6 space-y-4">
-            {['About', 'Services', 'Mentoring', 'Contact'].map((item) => (
+            {['About', 'Services', 'Contact'].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
