@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import { ChevronDown, ArrowRight, MapPin, Clock, Shield, Star, Globe, Sparkles, Mail, Phone, Menu, X, Play, Quote, TrendingUp, Users, Lock, ExternalLink } from 'lucide-react'
+import { ChevronDown, ArrowRight, MapPin, Clock, Shield, Star, Globe, Sparkles, Mail, Phone, Menu, X, Play, Quote, TrendingUp, Users, Lock, ExternalLink, CheckCircle, AlertCircle, Loader2 } from 'lucide-react'
 
 // Smooth scroll hook
 const useSmoothScroll = () => {
@@ -164,6 +164,62 @@ function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [isLoaded, setIsLoaded] = useState(false)
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+
+  // Contact form state
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    message: ''
+  })
+  const [formStatus, setFormStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
+  const [formError, setFormError] = useState('')
+
+  // Formspree form ID - Replace with your own form ID from https://formspree.io/
+  const FORMSPREE_FORM_ID = 'xygqzpjq'
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target
+    setFormData(prev => ({ ...prev, [name]: value }))
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setFormStatus('loading')
+    setFormError('')
+
+    try {
+      const formDataToSend = new FormData()
+      formDataToSend.append('firstName', formData.firstName)
+      formDataToSend.append('lastName', formData.lastName)
+      formDataToSend.append('email', formData.email)
+      formDataToSend.append('message', `From: ${formData.firstName} ${formData.lastName}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`)
+
+      const response = await fetch(`https://formspree.io/f/${FORMSPREE_FORM_ID}`, {
+        method: 'POST',
+        body: formDataToSend,
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+
+      if (response.ok) {
+        setFormStatus('success')
+        setFormData({ firstName: '', lastName: '', email: '', message: '' })
+
+        // Reset success message after 5 seconds
+        setTimeout(() => {
+          setFormStatus('idle')
+        }, 5000)
+      } else {
+        throw new Error('Form submission failed')
+      }
+    } catch (error) {
+      console.error('Form submission error:', error)
+      setFormStatus('error')
+      setFormError('Failed to send message. Please try again or email us directly at info@timetravelclub.ae')
+    }
+  }
 
   useSmoothScroll()
 
@@ -673,13 +729,43 @@ function App() {
             </TextReveal>
 
             <TextReveal delay={200}>
-              <form className="glassStrong p-10 rounded-3xl" onSubmit={(e) => e.preventDefault()}>
+              {/* Success Message */}
+              {formStatus === 'success' && (
+                <div className="glassStrong p-6 rounded-3xl mb-8 border border-[#D4AF37]/30 bg-[#D4AF37]/10">
+                  <div className="flex items-center gap-3 text-[#D4AF37]">
+                    <CheckCircle className="w-6 h-6" />
+                    <div>
+                      <p className="font-medium text-lg">Message Sent Successfully!</p>
+                      <p className="text-sm text-[#888888]">We'll get back to you within 24 hours.</p>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* Error Message */}
+              {formStatus === 'error' && (
+                <div className="glassStrong p-6 rounded-3xl mb-8 border border-red-500/30 bg-red-500/10">
+                  <div className="flex items-center gap-3 text-red-400">
+                    <AlertCircle className="w-6 h-6" />
+                    <div>
+                      <p className="font-medium text-lg">Failed to Send Message</p>
+                      <p className="text-sm text-[#888888]">{formError}</p>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              <form className="glassStrong p-10 rounded-3xl" onSubmit={handleSubmit}>
                 <div className="space-y-8">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="group">
                       <label className="block text-sm text-[#888888] mb-2 uppercase tracking-wider">First Name</label>
                       <input
                         type="text"
+                        name="firstName"
+                        value={formData.firstName}
+                        onChange={handleInputChange}
+                        required
                         className="w-full bg-[#111111] border border-[#333333] rounded-lg px-4 py-4 text-[#ededed] focus:border-[#D4AF37] focus:outline-none transition-colors group-hover:border-[#D4AF37]/50"
                         placeholder="John"
                       />
@@ -688,6 +774,10 @@ function App() {
                       <label className="block text-sm text-[#888888] mb-2 uppercase tracking-wider">Last Name</label>
                       <input
                         type="text"
+                        name="lastName"
+                        value={formData.lastName}
+                        onChange={handleInputChange}
+                        required
                         className="w-full bg-[#111111] border border-[#333333] rounded-lg px-4 py-4 text-[#ededed] focus:border-[#D4AF37] focus:outline-none transition-colors group-hover:border-[#D4AF37]/50"
                         placeholder="Doe"
                       />
@@ -697,6 +787,10 @@ function App() {
                     <label className="block text-sm text-[#888888] mb-2 uppercase tracking-wider">Email</label>
                     <input
                       type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      required
                       className="w-full bg-[#111111] border border-[#333333] rounded-lg px-4 py-4 text-[#ededed] focus:border-[#D4AF37] focus:outline-none transition-colors group-hover:border-[#D4AF37]/50"
                       placeholder="john@example.com"
                     />
@@ -704,17 +798,31 @@ function App() {
                   <div className="group">
                     <label className="block text-sm text-[#888888] mb-2 uppercase tracking-wider">Message</label>
                     <textarea
+                      name="message"
                       rows={5}
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      required
                       className="w-full bg-[#111111] border border-[#333333] rounded-lg px-4 py-4 text-[#ededed] focus:border-[#D4AF37] focus:outline-none transition-colors group-hover:border-[#D4AF37]/50 resize-none"
                       placeholder="Tell us about your strategic challenges..."
                     />
                   </div>
                   <button
                     type="submit"
-                    className="w-full py-5 bg-[#ededed] text-[#050505] font-medium rounded-lg hover:bg-[#D4AF37] transition-colors flex items-center justify-center gap-3 text-lg group"
+                    disabled={formStatus === 'loading'}
+                    className="w-full py-5 bg-[#ededed] text-[#050505] font-medium rounded-lg hover:bg-[#D4AF37] transition-colors flex items-center justify-center gap-3 text-lg group disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    Submit Inquiry
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    {formStatus === 'loading' ? (
+                      <>
+                        <Loader2 className="w-5 h-5 animate-spin" />
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        Submit Inquiry
+                        <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                      </>
+                    )}
                   </button>
                 </div>
               </form>
