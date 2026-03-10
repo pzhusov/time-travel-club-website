@@ -217,7 +217,7 @@ function App() {
     } catch (error) {
       console.error('Form submission error:', error)
       setFormStatus('error')
-      setFormError('Failed to send message. Please try again or email us directly at info@timetravelclub.ae')
+      setFormError('Failed to send message. Please try again or email us directly at info@timetravelclub.net')
     }
   }
 
@@ -837,7 +837,7 @@ function App() {
                   </div>
                   <div>
                     <div className="text-xs text-[#888888] uppercase tracking-wider">Email</div>
-                    <div className="font-medium">info@timetravelclub.ae</div>
+                    <div className="font-medium">info@timetravelclub.net</div>
                   </div>
                 </div>
               </div>
