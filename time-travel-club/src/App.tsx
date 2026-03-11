@@ -873,7 +873,7 @@ function App() {
 
             {/* Copyright */}
             <div className="text-sm text-[#888888]">
-              © 2024 Time Travel Club. All rights reserved.
+              © 2026 Time Travel Club. All rights reserved.
             </div>
           </div>
 
